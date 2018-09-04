@@ -1,0 +1,9 @@
+<div class="container">
+      <div class="form-group">
+              <label for="days"> Select no. of Days</label>
+              <select [(ngModel)]="selectedMethod" id="days" class="form-control"> 
+                  <option *ngFor="let method of days" [value]="method.id" >{{ method.days }} </option>
+              </select>
+      </div>
+
+</div>
