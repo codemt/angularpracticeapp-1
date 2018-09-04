@@ -1,9 +1,12 @@
 <div class="container">
-      <div class="form-group">
-              <label for="days"> Select no. of Days</label>
-              <select [(ngModel)]="selectedMethod" id="days" class="form-control"> 
-                  <option *ngFor="let method of days" [value]="method.id" >{{ method.days }} </option>
-              </select>
-      </div>
-
+    
+         <form #f="ngForm" (ngSubmit)="submit(f)">
+            <div class="form-group">
+                    <label for="days"> Select no. of Days</label>
+                    <select required ngModel name="period" #period="ngModel" id="days" class="form-control"> 
+                        <option *ngFor="let method of days" [value]="method.days" >{{ method.days }} </option>
+                    </select>
+                    <input type="submit" value="Submit">
+            </div>
+        </form>
 </div>

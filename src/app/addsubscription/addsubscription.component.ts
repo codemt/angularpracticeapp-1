@@ -23,4 +23,12 @@ export class AddsubscriptionComponent implements OnInit {
   ];
 
   mySelection: number;
+
+  submit(f){
+
+    console.log(f);
+    console.log(f.value);
+}
+
+
 }
