@@ -1,7 +1,8 @@
 <div class="container">
-    
          <form #f="ngForm" (ngSubmit)="submit(f)">
             <div class="form-group">
+                <label for="device"> Enter Device ID </label>
+                     <input required ngModel name="deviceid" #deviceid="ngModel" id="deviceid" type="text"> <br>
                     <label for="days"> Select no. of Days</label>
                     <select required ngModel name="period" #period="ngModel" id="days" class="form-control"> 
                         <option *ngFor="let method of days" [value]="method.days" >{{ method.days }} </option>

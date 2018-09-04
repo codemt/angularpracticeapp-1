@@ -22,7 +22,7 @@ export class AddsubscriptionComponent implements OnInit {
     { id: 2, days: 60 }
   ];
 
-  mySelection: number;
+  //mySelection: number;
 
   submit(f){
 
