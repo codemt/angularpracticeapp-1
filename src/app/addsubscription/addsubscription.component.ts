@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Http } from '@angular/http';
 
 interface Method {
   id: number;
@@ -11,7 +12,9 @@ interface Method {
   styleUrls: ['./addsubscription.component.css']
 })
 export class AddsubscriptionComponent implements OnInit {
-  constructor() { }
+
+  private url = 'http://127.0.0.1:8000/api/subscriptions';
+  constructor(private http : Http ) { }
 
   ngOnInit() {
   }
@@ -26,8 +29,13 @@ export class AddsubscriptionComponent implements OnInit {
 
   submit(f){
 
+    let data = f.value;
+    let final = JSON.stringify(data);
     console.log(f);
     console.log(f.value);
+    console.log(final);
+   // this.http.post(this.url,)
+
 }
 
 
